@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory name="fedora-ni">
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.password">fedora</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/fedora?createDatabaseIfNotExist=true</property>
+		<property name="hibernate.connection.username">fedora</property>
+		<property name="hibernate.default_catalog">fedora</property>
+		<property name="hibernate.default_schema">public</property>
+
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<property name="show_sql">true</property>
+
+		<mapping class="ni.fedora.modelos.Asistente"/>
+		
+	</session-factory>
+</hibernate-configuration>
