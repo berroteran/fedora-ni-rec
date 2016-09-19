@@ -16,7 +16,7 @@ public class Asistente implements java.io.Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    public Integer Id;
+    public Integer  Id;
     private String  primeroNombre	    = "";
     private String  segundoNomubre	    = "";
     private String  primerApellido	    = "";
@@ -160,6 +160,13 @@ public class Asistente implements java.io.Serializable {
      */
     public void setComentario(String comentario) {
 	this.comentario = comentario;
+    }
+
+    public String toLinea() {
+	String cadena = "";
+	cadena = "Nombres: '" + getPrimeroNombre() + "',  Apellidos: '" + getPrimerApellido() + "', email: '" + getCorreElectronico() + "', comentario: '" + getComentario()
+	        + "'; ";
+	return cadena;
     }
 
 }

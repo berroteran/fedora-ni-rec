@@ -17,26 +17,12 @@ import ni.fedora.modelos.Asistente;
 public class registraAsistente extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-
-
     /**
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
      *      response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	System.out.println("entro a DoGet");
-	try {
-	    // grabando
-	    Asistente a = new Asistente();
-	    a.setPrimeroNombre("omar");
-	    a.setSegundoNomubre("danilo");
-	    AsistenteDAO.createAsistente(a);
-	    
-	} catch (Exception e) {
-	    e.printStackTrace();
-	}
-	// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
     }
 
     /**
@@ -45,10 +31,29 @@ public class registraAsistente extends HttpServlet {
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	System.out.println("entro a doPOST");
-	
-	// TODO Auto-generated method stub
-	doGet(request, response);
-	
+
+	String pname = request.getParameter("form-first-name") == null ? "" : request.getParameter("form-first-name").toString();
+	String papellido = request.getParameter("form-last-name") ==  null? "" : request.getParameter("form-last-name").toString();
+	String pemail = request.getParameter("form-email") == null ? "": request.getParameter("form-email").toString();
+	String pdatos = request.getParameter("form-about-yourself") == null ? "" : request.getParameter("form-about-yourself").toString();
+
+	try {
+	    // grabando
+	    Asistente a = new Asistente();
+	    a.setPrimeroNombre(pname);
+	    a.setSegundoNomubre("");
+	    a.setPrimerApellido(papellido);
+	    a.setCorreElectronico( pemail );
+	    a.setComentario( pdatos);;
+	    AsistenteDAO.createAsistente(a);
+		// TODO Auto-generated method stub
+		response.getWriter().append("{'type':'success','message':'Registro Guardado' }");
+
+	} catch (Exception e) {
+	    e.printStackTrace();
+	    // TODO Auto-generated method stub
+		response.getWriter().append("{'type':'fail','message':'"+e.getMessage()+"' }");
+	}
     }
 
 }

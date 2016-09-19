@@ -1,280 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Fedora Nicaragua</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fedora Nicaragua</title>
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="assets/css/form-elements.css">
-        <link rel="stylesheet" href="assets/css/style.css">
+<!-- CSS -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/css/form-elements.css">
+<link rel="stylesheet" href="assets/css/style.css">
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <!-- Favicon and touch icons -->
-        <link rel="shortcut icon" href="assets/ico/favicon.png">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+<!-- Favicon and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
-    </head>
+	<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="js/validator.js"> </script>
+	
+</head>
 
-    <body>
+<body>
 
 
-        <!-- .page-navbar -->
-        <div id="header" class="page-navbar">
-            <!-- .navbar-brand -->
-            <a href="index.html" class="navbar-brand hidden-xs hidden-sm">
-                <img src="img/logo.png" class="logo hidden-xs" alt="Dynamic logo">
-                <img src="img/logosm.png" class="logo-sm hidden-lg hidden-md" alt="Dynamic logo">
-            </a>
-            <!-- / navbar-brand -->
-            <!-- .no-collapse -->
-            <div id="navbar-no-collapse" class="navbar-no-collapse">
-                <!-- top left nav -->
-                <ul class="nav navbar-nav">
-                    <li class="toggle-sidebar">
-                        <a href="#">
-                            <i class="fa fa-reorder"></i>
-                            <span class="sr-only">Collapse sidebar</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="reset-layout tipB" title="Reset panel position for this page"><i class="fa fa-history"></i></a>
-                    </li>
-                </ul>
-                <!-- / top left nav -->
-                <!-- top right nav -->
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" data-toggle="dropdown">
-                            <i class="fa fa-bell-o"></i>
-                            <span class="sr-only">Notifications</span>
-                            <span class="badge badge-danger">6</span>
-                        </a>
-                        <ul class="dropdown-menu right dropdown-notification" role="menu">
-                            <li><a href="#" class="dropdown-menu-header">Notifications</a>
-                            </li>
-                            <li><a href="#"><i class="l-basic-life-buoy"></i> 2 support request</a>
-                            </li>
-                            <li><a href="#"><i class="l-basic-gear"></i> Settings is changed</a>
-                            </li>
-                            <li><a href="#"><i class="l-weather-lightning"></i> 5 min server downtime</a>
-                            </li>
-                            <li><a href="#"><i class="l-basic-server2"></i> Databse backup is complete</a>
-                            </li>
-                            <li><a href="#"><i class="l-basic-lightbulb"></i> SuggeElson push 1 commit</a>
-                            </li>
-                            <li><a href="#" class="view-all">View all <i class="l-arrows-right"></i> </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" data-toggle="dropdown">
-                            <i class="fa fa-cog"></i>
-                            <span class="sr-only">Settings</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-form dynamic-settings right" role="menu">
-                            <li><a href="#" class="dropdown-menu-header">Template settings</a>
-                            </li>
-                            <li>
-                                <div class="toggle-custom">
-                                    <label class="toggle" data-on="ON" data-off="OFF">
-                                        <input type="checkbox" id="fixed-header-toggle" name="fixed-header-toggle" checked>
-                                        <span class="button-checkbox"></span>
-                                    </label>
-                                    <label for="fixed-header-toggle">Fixed header</label>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="toggle-custom">
-                                    <label class="toggle" data-on="ON" data-off="OFF">
-                                        <input type="checkbox" id="fixed-left-sidebar" name="fixed-left-sidebar" checked>
-                                        <span class="button-checkbox"></span>
-                                    </label>
-                                    <label for="fixed-left-sidebar">Fixed Left Sidebar</label>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="toggle-custom">
-                                    <label class="toggle" data-on="ON" data-off="OFF">
-                                        <input type="checkbox" id="fixed-right-sidebar" name="fixed-right-sidebar" checked>
-                                        <span class="button-checkbox"></span>
-                                    </label>
-                                    <label for="fixed-right-sidebar">Fixed Right Sidebar</label>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="login.html">
-                            <i class="fa fa-power-off"></i>
-                            <span class="sr-only">Logout</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a id="toggle-right-sidebar" href="#" class="tipB" title="Toggle right sidebar">
-                            <i class="l-software-layout-sidebar-right"></i>
-                            <span class="sr-only">Toggle right sidebar</span>
-                        </a>
-                    </li>
-                </ul>
-                <!-- / top right nav -->
-            </div>
-            <!-- / collapse -->
-        </div>
-        <!-- / page-navbar -->
-        
+	<!-- .page-navbar -->
+	<div id="header" class="page-navbar">
+		<!-- .navbar-brand -->
+		<a href="index.html" class="navbar-brand hidden-xs hidden-sm"> <img
+			src="img/logo.png" class="logo hidden-xs" alt="Dynamic logo"> <img
+			src="img/logosm.png" class="logo-sm hidden-lg hidden-md"
+			alt="Dynamic logo">
+		</a>
+		<!-- / navbar-brand -->
+		<!-- .no-collapse -->
+		<div id="navbar-no-collapse" class="navbar-no-collapse">
+			<!-- top left nav -->
+			<ul class="nav navbar-nav">
+				<li class="toggle-sidebar"><a href="#"> <i
+						class="fa fa-reorder"></i> <span class="sr-only">Collapse
+							sidebar</span>
+				</a></li>
+				<li><a href="#" class="reset-layout tipB"
+					title="Reset panel position for this page"><i
+						class="fa fa-history"></i></a></li>
+			</ul>
+			<!-- / top left nav -->
+			<!-- top right nav -->
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown"><a href="#" data-toggle="dropdown"> <i
+						class="fa fa-bell-o"></i> <span class="sr-only">Notifications</span>
+						<span class="badge badge-danger">6</span>
+				</a>
+					<ul class="dropdown-menu right dropdown-notification" role="menu">
+						<li><a href="#" class="dropdown-menu-header">Notifications</a>
+						</li>
+						<li><a href="#"><i class="l-basic-life-buoy"></i> 2
+								support request</a></li>
+						<li><a href="#"><i class="l-basic-gear"></i> Settings is
+								changed</a></li>
+						<li><a href="#"><i class="l-weather-lightning"></i> 5 min
+								server downtime</a></li>
+						<li><a href="#"><i class="l-basic-server2"></i> Databse
+								backup is complete</a></li>
+						<li><a href="#"><i class="l-basic-lightbulb"></i>
+								SuggeElson push 1 commit</a></li>
+						<li><a href="#" class="view-all">View all <i
+								class="l-arrows-right"></i>
+						</a></li>
+					</ul></li>
+				<li class="dropdown"><a href="#" data-toggle="dropdown"> <i
+						class="fa fa-cog"></i> <span class="sr-only">Settings</span>
+				</a>
+					<ul class="dropdown-menu dropdown-form dynamic-settings right"
+						role="menu">
+						<li><a href="#" class="dropdown-menu-header">Administracion</a></li>
+						<li>
+							<div class="toggle-custom">
+								<label class="toggle" data-on="ON" data-off="OFF"> <input type="checkbox" id="fixed-header-toggle" name="fixed-header-toggle" checked>
+									<span class="button-checkbox"></span>
+								</label>
+								<label for="fixed-header-toggle">
+									<a href="verRegistro" target="_new" >
+										<strong>Ver Registro</strong>
+									</a>
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="toggle-custom">
+								<label class="toggle" data-on="ON" data-off="OFF"> <input
+									type="checkbox" id="fixed-left-sidebar"
+									name="fixed-left-sidebar" checked> <span
+									class="button-checkbox"></span>
+								</label>
+								<label for="fixed-left-sidebar">Fixed Left Sidebar</label>
+							</div>
+						</li>
+						<li>
+							<div class="toggle-custom">
+								<label class="toggle" data-on="ON" data-off="OFF"> <input
+									type="checkbox" id="fixed-right-sidebar"
+									name="fixed-right-sidebar" checked> <span
+									class="button-checkbox"></span>
+								</label> <label for="fixed-right-sidebar">Fixed Right Sidebar</label>
+							</div>
+						</li>
+					</ul></li>
+				<li><a href="login.html"> <i class="fa fa-power-off"></i> <span
+						class="sr-only">Logout</span>
+				</a></li>
+				<li><a id="toggle-right-sidebar" href="#" class="tipB"
+					title="Toggle right sidebar"> <i
+						class="l-software-layout-sidebar-right"></i> <span class="sr-only">Toggle
+							right sidebar</span>
+				</a></li>
+			</ul>
+			<!-- / top right nav -->
+		</div>
+		<!-- / collapse -->
+	</div>
+	<!-- / page-navbar -->
 
-  
-  
-        <!-- Top content -->
-        <div class="top-content">
-        	
-            <div class="inner-bg">
-                <div class="container">
-                	
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1><strong>FEDORA NICARAGUA</strong> Registro de Visitas</h1>
-                            <div class="description">
-                            	<p>
-	                            	bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
-                            	</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-sm-5">
-                        	
-                        	<div class="form-box">
-	                        	<div class="form-top">
-	                        		<div class="form-top-left">
-	                        			<h3>Registrarse con una cuenta</h3>
-	                            		<p>Ingrese su nombre completo para registrarse :</p>
-	                        		</div>
-	                        		<div class="form-top-right">
-	                        			<i class="fa fa-lock"></i>
-	                        		</div>
-	                            </div>
-	                            <div class="form-bottom">
-				                    <form role="form" action="" method="post" class="login-form">
-				                    	<div class="form-group">
-				                    		<label class="sr-only" for="form-username">Username</label>
-				                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
-				                        </div>
-				                        <div class="form-group">
-				                        	<label class="sr-only" for="form-password">Password</label>
-				                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
-				                        </div>
-				                        <button type="submit" class="btn">Sign in!</button>
-				                    </form>
-			                    </div>
-		                    </div>
-		                
-		                	<div class="social-login">
-	                        	<h3>...or login with:</h3>
-	                        	<div class="social-login-buttons">
-		                        	<a class="btn btn-link-2" href="#">
-		                        		<i class="fa fa-facebook"></i> Facebook
-		                        	</a>
-		                        	<a class="btn btn-link-2" href="#">
-		                        		<i class="fa fa-twitter"></i> Twitter
-		                        	</a>
-		                        	<a class="btn btn-link-2" href="#">
-		                        		<i class="fa fa-google-plus"></i> Google Plus
-		                        	</a>
-	                        	</div>
-	                        </div>
-	                        
-                        </div>
-                        
-                        <div class="col-sm-1 middle-border"></div>
-                        <div class="col-sm-1"></div>
-                        	
-                        <div class="col-sm-5">
-                        	
-                        	<div class="form-box">
-                        		<div class="form-top">
-	                        		<div class="form-top-left">
-	                        			<h3>Sign up now</h3>
-	                            		<p>Fill in the form below to get instant access:</p>
-	                        		</div>
-	                        		<div class="form-top-right">
-	                        			<i class="fa fa-pencil"></i>
-	                        		</div>
-	                            </div>
-	                            <div class="form-bottom">
-				                    <form role="form" action="" method="post" class="registration-form">
-				                    	<div class="form-group">
-				                    		<label class="sr-only" for="form-first-name">First name</label>
-				                        	<input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
-				                        </div>
-				                        <div class="form-group">
-				                        	<label class="sr-only" for="form-last-name">Last name</label>
-				                        	<input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
-				                        </div>
-				                        <div class="form-group">
-				                        	<label class="sr-only" for="form-email">Email</label>
-				                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
-				                        </div>
-				                        <div class="form-group">
-				                        	<label class="sr-only" for="form-about-yourself">About yourself</label>
-				                        	<textarea name="form-about-yourself" placeholder="About yourself..." 
-				                        				class="form-about-yourself form-control" id="form-about-yourself"></textarea>
-				                        </div>
-				                        <button type="submit" class="btn">Sign me up!</button>
-				                    </form>
-			                    </div>
-                        	</div>
-                        	
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-            
-        </div>
 
-        <!-- Footer -->
-        <footer>
-        	<div class="container">
-        		<div class="row">
-        			
-        			<div class="col-sm-8 col-sm-offset-2">
-        				<div class="footer-border"></div>
-        				<p>Made by Anli Zaimi at <a href="http://azmind.com" target="_blank"><strong>AZMIND</strong></a> 
-        					having a lot of fun. <i class="fa fa-smile-o"></i></p>
-        			</div>
-        			
-        		</div>
-        	</div>
-        </footer>
 
-        <!-- Javascript -->
-        <script src="assets/js/jquery-1.11.1.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/js/jquery.backstretch.min.js"></script>
-        <script src="assets/js/scripts.js"></script>
-        
-        <!--[if lt IE 10]>
+
+	<!-- Top content -->
+	<div class="top-content">
+
+		<div class="inner-bg">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2 text">
+						<h1>
+							<strong>FEDORA NICARAGUA</strong> <br/>Registro de Visitas
+						</h1>
+						<div class="description">
+							<p><strong>FLISOL 2016:: </strong>bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+								bla bla bla bla</p>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- Button trigger modal -->
+				<button class="btn btn-primary btn-lg" data-toggle="modal"
+					data-target="#myModalHorizontal">
+					<strong>Registrar Visita</strong>
+				</button>
+
+				<div class="social-login">
+					<h3>...or login with:</h3>
+					<div class="social-login-buttons">
+						<a class="btn btn-link-2" href="#"> <i class="fa fa-facebook"></i>
+							Facebook
+						</a> <a class="btn btn-link-2" href="#"> <i class="fa fa-twitter"></i>
+							Twitter
+						</a> <a class="btn btn-link-2" href="#"> <i
+							class="fa fa-google-plus"></i> Google Plus
+						</a>
+					</div>
+				</div>
+
+			</div>
+
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModalHorizontal" tabindex="1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+				<div class="col-sm-5">
+							<form id="contact-form" role="form" action="registraAsistente" method="post" class="registration-form">
+
+					<div class="form-box">
+						<div class="form-top">
+							<div class="form-top-left">
+								<h3>Firmar el Libro de Visitas</h3>
+								<p>Por favor complete el los datos para registrar su visita:</p>
+							</div>
+							<div class="form-top-right">
+								<i class="fa fa-pencil"></i>
+							</div>
+						</div>
+						<div class="form-bottom">
+								<div class="form-group">
+									<label class="sr-only" for="form-first-name">Nombres* </label>
+									<input type="text" name="form-first-name" placeholder="Nombres ..." class="form-first-name form-control" id="form-first-name"  required="required" data-error="Al menos un nombre es requerido." >
+								</div>
+								<div class="form-group">
+									<label class="sr-only" for="form-last-name">Apellidos * </label> <input
+										type="text" name="form-last-name" placeholder="Apellidos..."
+										class="form-last-name form-control" id="form-last-name"  required="required" data-error="Al menos un apellido es requerido.">
+								</div>
+								<div class="form-group">
+									<label class="sr-only" for="form-email">E-mail *</label> <input
+										type="text" name="form-email" placeholder="Email ..."
+										class="form-email form-control" id="form-email"  required="required" data-error="El Correo Electronico es requerido.">
+								</div>
+								<div class="form-group">
+									<label class="sr-only" for="form-about-yourself">Comentario</label>
+									<textarea name="form-about-yourself"
+										placeholder="Algun comentario o como supo del evento"
+										class="form-about-yourself form-control" id="form-about-yourself"></textarea>
+								</div>
+							
+							<!-- Modal Footer -->
+							<div class="form-group">
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default"
+										data-dismiss="modal">Cancelar</button>
+										
+									<button  type="submit" class="btn btn-success btn-send" value="Registrar">Guardar</button>
+								</div>
+							</div>
+							</form>
+							<!-- Fin del formulario -->
+						</div>
+					</div>
+				</div>
+
+
+				<!-- Fin de Modal -->
+
+			</div>
+
+		</div>
+	</div>
+
+	</div>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-8 col-sm-offset-2">
+					<div class="footer-border"></div>
+					<p>
+						Made by <a href="http://fedora-ni" target="_blank"><strong>FEDORA
+								NI</strong></a> having a lot of fun. <i class="fa fa-smile-o"></i>
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.backstretch.min.js"></script>
+	<script src="assets/js/scripts.js"></script>
+
+	<!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>
         <![endif]-->
 
-    </body>
+</body>
 
+<script type="text/javascript">
+$(function () {
+
+    $('#contact-form').validator();
+
+    $('#contact-form').on('submit', function (e) {
+        if (!e.isDefaultPrevented()) {
+            var url = "registraAsistente";
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: $(this).serialize(),
+                success: function (data)
+                {
+                    var messageAlert = 'alert-' + data.type;
+                    var messageText = data.message;
+
+                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                    if (messageAlert && messageText) {
+                        $('#contact-form').find('.messages').html(alertBox);
+                        $('#contact-form')[0].reset();
+                    }
+                }
+            });
+            return false;
+        }
+    })
+});
+</script>
 </html>
